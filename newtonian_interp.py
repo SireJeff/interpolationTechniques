@@ -55,3 +55,59 @@ plt.xlabel('x')
 plt.ylabel('cosh(x)')
 plt.title('Newtonian Interpolation of cosh(x)')
 plt.show()
+
+# Define the interval and the function (sin(x))
+interval_start = 0
+interval_end = 2 * np.pi
+num_samples = 5
+num_interp_points = 100
+
+# Generate sample points within the interval
+xi = np.linspace(interval_start, interval_end, num_samples)
+
+# Compute the function values at these sample points (sin(x))
+yi = np.sin(xi)
+
+# Define points at which you want to evaluate the interpolated function
+x_values = np.linspace(interval_start, interval_end, num_interp_points)
+
+# Perform Newtonian interpolation
+interpolated_values = [newton_interpolation(xi, yi, x) for x in x_values]
+
+# Plot the original function and the interpolated values
+plt.plot(xi, yi, 'bo', label='Sample Points')
+plt.plot(x_values, np.sin(x_values), 'g-', label='sin(x)')
+plt.plot(x_values, interpolated_values, 'r--', label='Interpolated (Newtonian)')
+plt.legend()
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+plt.title('Newtonian Interpolation of sin(x)')
+plt.show()
+
+# Define the interval and the function (e^x)
+interval_start = 0
+interval_end = 2
+num_samples = 5
+num_interp_points = 100
+
+# Generate sample points within the interval
+xi = np.linspace(interval_start, interval_end, num_samples)
+
+# Compute the function values at these sample points (e^x)
+yi = np.exp(xi)
+
+# Define points at which you want to evaluate the interpolated function
+x_values = np.linspace(interval_start, interval_end, num_interp_points)
+
+# Perform Newtonian interpolation
+interpolated_values = [newton_interpolation(xi, yi, x) for x in x_values]
+
+# Plot the original function and the interpolated values
+plt.plot(xi, yi, 'bo', label='Sample Points')
+plt.plot(x_values, np.exp(x_values), 'g-', label='e^x')
+plt.plot(x_values, interpolated_values, 'r--', label='Interpolated (Newtonian)')
+plt.legend()
+plt.xlabel('x')
+plt.ylabel('e^x')
+plt.title('Newtonian Interpolation of e^x')
+plt.show()
