@@ -1,4 +1,4 @@
-```markdown
+
 # Interpolation Techniques
 
 A collection of Python scripts for implementing and comparing various interpolation techniques.
