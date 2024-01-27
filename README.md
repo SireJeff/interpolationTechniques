@@ -1,5 +1,3 @@
-Certainly! Below is a template for a clean README file for the codes we've discussed. Please customize it further based on your specific project requirements.
-
 ```markdown
 # Interpolation Techniques
 
